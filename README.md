@@ -28,7 +28,7 @@ Connexion internet nécessaire pour les polices Google (Inter, Poppins).
 - Les liens WhatsApp ouvrent une conversation avec un message prérempli ; ils n'enregistrent aucune commande.
 
 ## Référencement (SEO)
-- Adresse prévue : `https://paulide-simeu.github.io/` (dépôt GitHub nommé exactement `paulide-simeu.github.io`).
+- Adresse prévue : `https://its-market-cameroun.netlify.app/` (hébergement Netlify ; le code est sauvegardé sur GitHub).
 - Si l'adresse change (nom de domaine, autre nom de dépôt), mettre à jour : `canonical`, `og:url`, `og:image` et le JSON-LD dans `index.html`, ainsi que `sitemap.xml` et `robots.txt`.
 - Après la mise en ligne : valider le site dans Google Search Console et Bing Webmaster Tools, envoyer `sitemap.xml`.
 

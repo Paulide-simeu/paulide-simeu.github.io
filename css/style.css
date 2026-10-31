@@ -71,112 +71,115 @@ a {
  */
 
 .sidebar-toggle {
-  position: fixed;
+    position: fixed;
 
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
 
-  width: 1px;
-  height: 1px;
+    width: 1px;
+    height: 1px;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  opacity: 0;
+    opacity: 0;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  clip-path: inset(50%);
-  white-space: nowrap;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 .menu-button {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  border-radius: 8px;
+    border-radius: 8px;
 
-  transition:
-    background-color 0.2s ease,
-    transform 0.15s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
 }
 
 /* Survol */
 
 .menu-button:hover {
-  background-color: #f1f7f3;
+    background-color: #F1F7F3;
 }
 
 .menu-button:hover span {
-  background-color: #1b6b45;
+    background-color: #1B6B45;
 }
 
 /* Effet de pression */
 
 .menu-button:active {
-  transform: scale(0.88);
+    transform: scale(0.88);
 }
 
-/* 
+
+/* ========================================
    BARRES PAR DÉFAUT
    SIDEBAR FERMÉE → CROIX
- */
+======================================== */
 
 .menu-button span {
-  display: block;
+    display: block;
 
-  width: 20px;
-  height: 2px;
+    width: 20px;
+    height: 2px;
 
-  background-color: #24201d;
+    background-color: #24201D;
 
-  border-radius: 2px;
+    border-radius: 2px;
 
-  transform-origin: center;
+    transform-origin: center;
 
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease,
-    background-color 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background-color 0.2s ease;
 }
 
 /* Croix */
 
 .menu-button span:first-child {
-  transform: translateY(7px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .menu-button span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .menu-button span:last-child {
-  transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
-/* 
+
+/* ========================================
    SIDEBAR OUVERTE → 3 BARRES
- */
+======================================== */
 
 .sidebar-toggle:checked ~ .site-header .menu-button span:first-child {
-  transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
 }
 
 .sidebar-toggle:checked ~ .site-header .menu-button span:nth-child(2) {
-  opacity: 1;
+    opacity: 1;
 }
 
 .sidebar-toggle:checked ~ .site-header .menu-button span:last-child {
-  transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
 }
+
 
 /* 
    MAIN NAVIGATION
@@ -376,23 +379,24 @@ a {
   transform: translateX(-100%);
 }
 main {
-  margin-left: 250px;
-  transition: margin-left 0.3s ease;
-  container-type: inline-size; /* permet aux grilles de réagir à la largeur réelle de <main> (sidebar ouverte ou fermée) */
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+    container-type: inline-size; /* permet aux grilles de réagir à la largeur réelle de <main> (sidebar ouverte ou fermée) */
 }
 
 .sidebar-toggle:checked ~ main {
-  margin-left: 0;
+    margin-left: 0;
 }
+
 
 /* Footer toujours sur toute la largeur */
 .site-footer {
-  margin-left: 0;
+    margin-left: 0;
 }
 
-/* 
+/* ========================================
    HERO
-*/
+======================================== */
 
 .hero {
   min-height: calc(100vh - 72px);
@@ -476,9 +480,9 @@ main {
   transform: translateY(1px);
 }
 
-/*
+/* ========================================
    HERO PRODUCTS
- */
+======================================== */
 
 .hero-products {
   display: grid;
@@ -521,9 +525,9 @@ main {
   font-weight: 600;
 }
 
-/* 
+/* ========================================
    PRODUCTS
-*/
+======================================== */
 
 .products {
   padding: 96px 64px;
@@ -675,9 +679,9 @@ main {
   background-color: #155437;
 }
 
-/* 
+/* ========================================
    PACKS
- */
+======================================== */
 
 .packs {
   padding: 96px 64px;
@@ -790,9 +794,9 @@ main {
   background-color: #155437;
 }
 
-/* 
+/* ========================================
    WHY US
- */
+======================================== */
 
 .why-us {
   padding: 96px 64px;
@@ -856,9 +860,9 @@ main {
   line-height: 1.6;
 }
 
-/* 
+/* ========================================
    HOW IT WORKS
- */
+======================================== */
 .how-it-works {
   padding: 96px 64px;
   background-color: #fffdf8;
@@ -905,9 +909,9 @@ main {
   line-height: 1.7;
 }
 
-/* 
+/* ========================================
    DELIVERY
- */
+======================================== */
 
 .delivery {
   padding: 96px 64px;
@@ -1062,9 +1066,9 @@ main {
   font-size: 15px;
 }
 
-/* 
+/* ========================================
    WHATSAPP CTA
- */
+======================================== */
 
 .whatsapp-cta {
   padding: 80px 64px;
@@ -1150,9 +1154,9 @@ main {
   transform: translateY(1px);
 }
 
-/* 
+/* ========================================
    FAQ
- */
+======================================== */
 
 .faq {
   padding: 96px 64px;
@@ -1235,9 +1239,9 @@ main {
   outline-offset: -4px;
 }
 
-/* 
+/* ========================================
    FOOTER
- */
+======================================== */
 .site-footer {
   width: 100%;
   padding: 64px 64px 24px;
@@ -1318,29 +1322,29 @@ main {
   font-size: 13px;
   line-height: 1.6;
 }
-/*
+/* ========================================
    FOOTER — ESPACE POUR LA SIDEBAR
- */
+======================================== */
 
 .site-footer {
-  container-type: inline-size;
-  margin-left: 250px;
-  width: calc(100% - 250px);
+    container-type: inline-size;
+    margin-left: 250px;
+    width: calc(100% - 250px);
 
-  transition:
-    margin-left 0.3s ease,
-    width 0.3s ease;
+    transition:
+        margin-left 0.3s ease,
+        width 0.3s ease;
 }
 
 .sidebar-toggle:checked ~ .site-footer {
-  margin-left: 0;
-  width: 100%;
+    margin-left: 0;
+    width: 100%;
 }
 
-/* 
+/* ========================================
    IMAGES PRODUITS
    (mix-blend-mode: multiply fond blanc des JPEG se fond dans le cadre vert clair)
-*/
+======================================== */
 
 .hero-product-image img,
 .product-image img {
@@ -1355,9 +1359,9 @@ main {
   padding: 12px;
 }
 
-/*
+/* ========================================
    ICÔNES SVG (héritent de la couleur du texte)
- */
+======================================== */
 
 .icon {
   width: 1em;
@@ -1380,9 +1384,9 @@ main {
   height: 20px;
 }
 
-/*
+/* ========================================
    FOOTER — RÉSEAUX SOCIAUX
- */
+======================================== */
 
 .footer-social {
   margin-top: 20px;
@@ -1418,9 +1422,9 @@ main {
   height: 20px;
 }
 
-/* 
+/* ========================================
    ACCESSIBILITÉ
- */
+======================================== */
 
 /* Ancres : le titre ne passe plus sous le header fixe */
 main section[id] {
@@ -1452,9 +1456,9 @@ a:focus-visible,
   }
 }
 
-/* 
+/* ========================================
    PHOTO DE LA SECTION LIVRAISON
-*/
+======================================== */
 
 .delivery-photo {
   display: block;
@@ -1468,9 +1472,9 @@ a:focus-visible,
   border-radius: 12px;
 }
 
-/* 
-   BOUTON MODE CLAIR / SOMBRE 
- */
+/* ========================================
+   BOUTON MODE CLAIR / SOMBRE (CSS seul, sans JavaScript)
+======================================== */
 
 .header-actions {
   display: flex;
@@ -1523,127 +1527,39 @@ a:focus-visible,
   outline-offset: 3px;
 }
 
-/*
+/* ========================================
    MODE SOMBRE
- */
+======================================== */
 
 :root:has(#theme-toggle:checked) {
   color-scheme: dark;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    body,
-    .hero,
-    .packs,
-    .how-it-works,
-    .whatsapp-cta,
-    .product-card,
-    .why-us-card,
-    .faq-item
-  ) {
+:root:has(#theme-toggle:checked) :is(body, .hero, .packs, .how-it-works, .whatsapp-cta, .product-card, .why-us-card, .faq-item) {
   background-color: #161412;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .site-header,
-    .sidebar,
-    .hero-product,
-    .products,
-    .pack-card,
-    .why-us,
-    .step-card,
-    .delivery,
-    .delivery-visual-card,
-    .faq
-  ) {
+:root:has(#theme-toggle:checked) :is(.site-header, .sidebar, .hero-product, .products, .pack-card, .why-us, .step-card, .delivery, .delivery-visual-card, .faq) {
   background-color: #1f1c19;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .delivery-visual,
-    .why-us-icon,
-    .step-number,
-    .delivery-detail-icon,
-    .menu-button:hover,
-    .theme-button:hover,
-    .sidebar-link:hover,
-    .sidebar-link.active
-  ) {
+:root:has(#theme-toggle:checked) :is(.delivery-visual, .why-us-icon, .step-number, .delivery-detail-icon, .menu-button:hover, .theme-button:hover, .sidebar-link:hover, .sidebar-link.active) {
   background-color: #23302a;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .site-header,
-    .sidebar,
-    .hero-product,
-    .product-card,
-    .pack-card:not(.pack-card-featured),
-    .why-us-card,
-    .step-card,
-    .delivery-visual-card,
-    .faq-item,
-    .theme-button
-  ) {
+:root:has(#theme-toggle:checked) :is(.site-header, .sidebar, .hero-product, .product-card, .pack-card:not(.pack-card-featured), .why-us-card, .step-card, .delivery-visual-card, .faq-item, .theme-button) {
   border-color: #3a342f;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    body,
-    .logo,
-    .hero-title,
-    .section-title,
-    .product-title,
-    .product-price,
-    .pack-quantity,
-    .pack-price,
-    .why-us-title,
-    .step-title,
-    .delivery-title,
-    .delivery-details li,
-    .delivery-city,
-    .faq-question,
-    .theme-button
-  ) {
+:root:has(#theme-toggle:checked) :is(body, .logo, .hero-title, .section-title, .product-title, .product-price, .pack-quantity, .pack-price, .why-us-title, .step-title, .delivery-title, .delivery-details li, .delivery-city, .faq-question, .theme-button) {
   color: #f3eee8;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .nav-link,
-    .sidebar-label,
-    .sidebar-link,
-    .hero-description,
-    .section-description,
-    .pack-units,
-    .why-us-description,
-    .step-description,
-    .delivery-description,
-    .delivery-country,
-    .faq-answer p
-  ) {
+:root:has(#theme-toggle:checked) :is(.nav-link, .sidebar-label, .sidebar-link, .hero-description, .section-description, .pack-units, .why-us-description, .step-description, .delivery-description, .delivery-country, .faq-answer p) {
   color: #b9b0a8;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .nav-link:hover,
-    .nav-link.active,
-    .sidebar-link:hover,
-    .sidebar-link.active,
-    .hero-kicker,
-    .section-kicker,
-    .product-brand,
-    .pack-label,
-    .why-us-icon,
-    .step-number,
-    .delivery-detail-icon,
-    .faq-icon
-  ) {
+:root:has(#theme-toggle:checked) :is(.nav-link:hover, .nav-link.active, .sidebar-link:hover, .sidebar-link.active, .hero-kicker, .section-kicker, .product-brand, .pack-label, .why-us-icon, .step-number, .delivery-detail-icon, .faq-icon) {
   color: #5fc08c;
 }
 
@@ -1664,9 +1580,9 @@ a:focus-visible,
   background-color: #0d0b0a;
 }
 
-/* 
+/* ========================================
    LIVRAISON : ZONES, FRAIS, QUARTIERS
- */
+======================================== */
 
 .delivery-zones {
   max-width: 1100px;
@@ -1761,9 +1677,9 @@ a:focus-visible,
   text-align: center;
 }
 
-/* 
+/* ========================================
    REVENDEURS
-*/
+======================================== */
 
 .reseller-banner {
   max-width: 1100px;
@@ -1823,18 +1739,11 @@ a:focus-visible,
   border-color: #3a342f;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(
-    .delivery-zones-title,
-    .city-name,
-    .delivery-conditions,
-    .reseller-title
-  ) {
+:root:has(#theme-toggle:checked) :is(.delivery-zones-title, .city-name, .delivery-conditions, .reseller-title) {
   color: #f3eee8;
 }
 
-:root:has(#theme-toggle:checked)
-  :is(.delivery-zones-note, .zone-name, .city-districts, .reseller-text) {
+:root:has(#theme-toggle:checked) :is(.delivery-zones-note, .zone-name, .city-districts, .reseller-text) {
   color: #b9b0a8;
 }
 
@@ -1842,9 +1751,9 @@ a:focus-visible,
   color: #5fc08c;
 }
 
-/* 
+/* ========================================
    PAGES SECONDAIRES (mentions légales, 404) ET LIENS DE FOOTER
- */
+======================================== */
 
 .footer-contact-text a,
 .footer-bottom a {
@@ -1913,9 +1822,9 @@ a:focus-visible,
   font-size: 14px;
 }
 
-/*
+/* ========================================
    GALERIE REVENDEURS
- */
+======================================== */
 
 .reseller-gallery {
   flex: 1 1 100%;

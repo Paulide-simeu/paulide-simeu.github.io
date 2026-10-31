@@ -1,12 +1,12 @@
-/* 
-    HEADER + SIDEBAR
+/* ========================================
+   05.13.1 — HEADER + SIDEBAR
    TABLETTE / MOBILE
- */
+======================================== */
 
-/* 
+/* ========================================
    TABLETTE
    Jusqu'à 1024px
- */
+======================================== */
 
 @media (max-width: 1024px) {
   .site-header {
@@ -43,10 +43,10 @@
   }
 }
 
-/*
+/* ========================================
    MOBILE
    Jusqu'à 767px
- */
+======================================== */
 
 @media (max-width: 767px) {
   /* HEADER */
@@ -131,9 +131,9 @@
     width: 100%;
   }
 }
-/* 
-    HERO RESPONSIVE
- */
+/* ========================================
+   05.13.2 — HERO RESPONSIVE
+======================================== */
 
 @media (max-width: 767px) {
 
@@ -181,14 +181,13 @@
 
 }
 
-/* 
-   RESPONSIVE GLOBAL
+/* =========================================
+   05.13.3 — RESPONSIVE GLOBAL
    ITS MARKET
-*/
-
-/* 
+========================================= */
+/* =========================================
    TABLETTE : 768px à 1024px
- */
+========================================= */
 @container (max-width: 960px) {
     /* Espacement général des sections */
     .products,
@@ -242,9 +241,9 @@
         gap: 36px 28px;
     }
 }
-/* 
+/* =========================================
    MOBILE : 767px maximum
- */
+========================================= */
 @media (max-width: 767px) {
     /* Empêcher les débordements horizontaux */
     *,
@@ -280,9 +279,9 @@
         font-size: 14px;
         line-height: 1.7;
     }
-    /* 
+    /* =====================================
        PRODUCTS
-    */
+    ===================================== */
     .products-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
@@ -301,9 +300,9 @@
         max-width: 100%;
         object-fit: contain;
     }
-    /* 
+    /* =====================================
        PACKS
-    */
+    ===================================== */
     .packs-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
@@ -325,9 +324,9 @@
         padding: 10px 8px;
         font-size: 13px;
     }
-    /* 
+    /* =====================================
        WHY US
-   */
+    ===================================== */
     .why-us-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 16px;
@@ -336,9 +335,9 @@
         width: 100%;
         min-width: 0;
     }
-    /*
+    /* =====================================
        HOW IT WORKS
-     */
+    ===================================== */
     .steps-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
@@ -347,9 +346,9 @@
         width: 100%;
         min-width: 0;
     }
-    /* 
+    /* =====================================
        DELIVERY
-     */
+    ===================================== */
     .delivery-content {
         grid-template-columns: minmax(0, 1fr);
         gap: 28px;
@@ -357,9 +356,9 @@
     .delivery-content > * {
         min-width: 0;
     }
-    /* 
+    /* =====================================
        WHATSAPP CTA
-  */
+    ===================================== */
     .whatsapp-cta {
         text-align: center;
     }
@@ -374,9 +373,9 @@
         max-width: 340px;
         min-height: 48px;
     }
-    /* 
+    /* =====================================
        FAQ
-    */
+    ===================================== */
     .faq-list {
         width: 100%;
         max-width: 100%;
@@ -389,9 +388,9 @@
     .faq-answer {
         padding: 0 16px 18px;
     }
-    /* 
+    /* =====================================
        FOOTER
-    */
+    ===================================== */
     .site-footer {
         padding: 48px 20px 24px;
     }
@@ -418,9 +417,9 @@
         font-size: 12px;
     }
 }
-/* 
+/* =========================================
    PETITS MOBILES : 400px maximum
- */
+========================================= */
 @media (max-width: 400px) {
     /* Packs : une colonne pour conserver
        des cartes et des boutons lisibles */
