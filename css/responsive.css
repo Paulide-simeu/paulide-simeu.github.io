@@ -1,0 +1,446 @@
+/* 
+    HEADER + SIDEBAR
+   TABLETTE / MOBILE
+ */
+
+/* 
+   TABLETTE
+   Jusqu'à 1024px
+ */
+
+@media (max-width: 1024px) {
+  .site-header {
+    height: 68px;
+    padding: 0 24px;
+  }
+
+  .main-navigation {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    min-height: 68px;
+  }
+
+  .header-cta {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .sidebar {
+    top: 68px;
+    height: calc(100vh - 68px);
+  }
+
+  main {
+    margin-left: 250px;
+  }
+
+  .site-footer {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+}
+
+/*
+   MOBILE
+   Jusqu'à 767px
+ */
+
+@media (max-width: 767px) {
+  /* HEADER */
+
+  .site-header {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  /* Navigation desktop masquée */
+
+  .main-navigation {
+    display: none;
+  }
+
+  /* CTA header masqué */
+
+  .header-cta {
+    display: none;
+  }
+
+  /* SIDEBAR */
+
+  .sidebar {
+    top: 64px;
+    width: min(280px, 85vw);
+    height: calc(100vh - 64px);
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+  }
+
+  /* Hamburger : 3 barres quand fermé, croix quand ouvert (inverse du desktop) */
+
+  .menu-button span:first-child {
+    transform: translateY(0) rotate(0);
+  }
+
+  .menu-button span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .menu-button span:last-child {
+    transform: translateY(0) rotate(0);
+  }
+
+  .sidebar-toggle:checked ~ .site-header .menu-button span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .sidebar-toggle:checked ~ .site-header .menu-button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .sidebar-toggle:checked ~ .site-header .menu-button span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* CONTENU PRINCIPAL */
+
+  main {
+    margin-left: 0;
+  }
+
+  /* FOOTER */
+
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* 
+    HERO RESPONSIVE
+ */
+
+@media (max-width: 767px) {
+
+    .hero {
+        min-height: auto;
+        padding: 48px 16px 40px;
+    }
+
+    .hero {
+        gap: 36px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.1;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-products {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .hero-product {
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .hero-product-image {
+        height: clamp(200px, 58vw, 260px);
+    }
+
+}
+
+/* 
+   RESPONSIVE GLOBAL
+   ITS MARKET
+*/
+
+/* 
+   TABLETTE : 768px à 1024px
+ */
+@container (max-width: 960px) {
+    /* Espacement général des sections */
+    .products,
+    .packs,
+    .why-us,
+    .how-it-works,
+    .delivery,
+    .whatsapp-cta,
+    .faq {
+        padding: 72px 32px;
+    }
+    /* Produits */
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    /* Packs */
+    .packs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    /* Pourquoi nous choisir */
+    .why-us-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+/* <main> étroit (sidebar ouverte sur tablette) */
+@container (max-width: 760px) {
+    .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+    .delivery-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+    .delivery-content > * {
+        min-width: 0;
+    }
+}
+@container (max-width: 640px) {
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+/* Footer : se base sur sa propre largeur (il est hors de <main>) */
+@container (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 28px;
+    }
+}
+/* 
+   MOBILE : 767px maximum
+ */
+@media (max-width: 767px) {
+    /* Empêcher les débordements horizontaux */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Espacement général */
+    .products,
+    .packs,
+    .why-us,
+    .how-it-works,
+    .delivery,
+    .whatsapp-cta,
+    .faq {
+        padding: 56px 16px;
+    }
+    /* Titres des sections */
+    .section-title {
+        font-size: clamp(26px, 7vw, 32px);
+        line-height: 1.2;
+    }
+    .section-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    /* 
+       PRODUCTS
+    */
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+    .product-cta {
+        width: 100%;
+    }
+    .product-content {
+        padding: 8px 16px 24px;
+    }
+    .product-card img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+    /* 
+       PACKS
+    */
+    .packs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+    .pack-card {
+        width: 100%;
+        min-width: 0;
+        padding: 20px 12px;
+    }
+    .pack-quantity {
+        font-size: 40px;
+    }
+    .pack-card p {
+        overflow-wrap: anywhere;
+    }
+    .pack-cta {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    /* 
+       WHY US
+   */
+    .why-us-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .why-us-card {
+        width: 100%;
+        min-width: 0;
+    }
+    /*
+       HOW IT WORKS
+     */
+    .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+    .step-card {
+        width: 100%;
+        min-width: 0;
+    }
+    /* 
+       DELIVERY
+     */
+    .delivery-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+    .delivery-content > * {
+        min-width: 0;
+    }
+    /* 
+       WHATSAPP CTA
+  */
+    .whatsapp-cta {
+        text-align: center;
+    }
+    .whatsapp-cta-content {
+        padding: 40px 20px;
+    }
+    .whatsapp-cta-title {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+    .whatsapp-cta-button {
+        width: 100%;
+        max-width: 340px;
+        min-height: 48px;
+    }
+    /* 
+       FAQ
+    */
+    .faq-list {
+        width: 100%;
+        max-width: 100%;
+    }
+    .faq-question {
+        gap: 12px;
+        padding: 18px 16px;
+        font-size: 14px;
+    }
+    .faq-answer {
+        padding: 0 16px 18px;
+    }
+    /* 
+       FOOTER
+    */
+    .site-footer {
+        padding: 48px 20px 24px;
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 20px;
+    }
+    .footer-brand {
+        max-width: 100%;
+    }
+    .footer-content > * {
+        min-width: 0;
+    }
+    .footer-navigation a,
+    .footer-contact-link,
+    .footer-contact-text,
+    .footer-description {
+        overflow-wrap: anywhere;
+    }
+    .footer-bottom {
+        padding-top: 20px;
+    }
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+/* 
+   PETITS MOBILES : 400px maximum
+ */
+@media (max-width: 400px) {
+    /* Packs : une colonne pour conserver
+       des cartes et des boutons lisibles */
+    .packs-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .pack-card {
+        padding: 22px 18px;
+    }
+    /* Footer : une colonne */
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+    .footer-brand {
+        max-width: 100%;
+    }
+    /* Boutons */
+    .hero-cta {
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Éditeurs (VS Code, JetBrains, historique local)
+.vscode/
+.idea/
+.history/
+*.swp
+*.code-workspace
+
+# Secrets et clés (ne jamais versionner)
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+secrets.*
+
+# Temporaires, archives, sources lourdes
+*.log
+*.tmp
+*.bak
+*.zip
+*.rar
+*.psd
+*.fig
+node_modules/
+
+# Documents de travail privés (gardés en local)
+JOURNAL.md
+SECURITE.md

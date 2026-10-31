@@ -1,0 +1,4 @@
+ITS MARKET — icônes SVG
+Copiez le contenu du dossier icons dans votre projet : assets/icons/
+Les icônes utilisent currentColor : leur couleur sera contrôlée par le CSS.
+Ne remplacez pas encore les caractères dans index.html ; on les intégrera ensemble après vérification.
