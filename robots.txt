@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://its-market-cameroun.netlify.app/sitemap.xml
+Sitemap: https://its-market-douala.pages.dev/sitemap.xml
